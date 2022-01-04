@@ -1,0 +1,233 @@
+{
+  "name": "Base Game",
+  "game": "Pokémon Yellow",
+  "pokedex":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151],
+  "languages":["de","en"],
+  "story_items": {
+    "hms": [
+      {"id":"hm01","url":null,"localization":{"de":"","en":""}},
+      {"id":"hm02","url":null,"localization":{"de":"","en":""}},
+      {"id":"hm03","url":null,"localization":{"de":"","en":""}},
+      {"id":"hm04","url":null,"localization":{"de":"","en":""}},
+      {"id":"hm05","url":null,"localization":{"de":"","en":""}}
+    ],
+    "badges": [
+      {"id":"boulder_badge","url":null,"localization":{"de":"","en":""}},
+      {"id":"cascade_badge","url":null,"localization":{"de":"","en":""}},
+      {"id":"thunder_badge","url":null,"localization":{"de":"","en":""}},
+      {"id":"rainbow_badge","url":null,"localization":{"de":"","en":""}},
+      {"id":"soul_badge","url":null,"localization":{"de":"","en":""}},
+      {"id":"marsh_badge","url":null,"localization":{"de":"","en":""}},
+      {"id":"volcano_badge","url":null,"localization":{"de":"","en":""}},
+      {"id":"earth_badge","url":null,"localization":{"de":"","en":""}}
+    ],
+    "misc": [
+      {"id":"oaks_parcel","url":null,"localization":{"de":"","en":""}}
+    ]
+  },
+  "locations": {
+    "celadon_city": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "team_rocket_hideout": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "cerulean_city": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "cerulean_cave": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "cinnabar_island": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "pokemon_mansion": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "digletts_cave": {
+      "localization": {"de":"","en":""}
+    },
+    "fuchsia_city": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "safari_zone": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "indigo_plateau": {
+      "localization": {"de":"","en":""}
+    },
+    "lavender_town": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "pokemon_tower": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "mt_moon": {
+      "localization": {"de":"","en":""}
+    },
+    "pallet_town": {
+      "localization": {"de":"Alabastia","en":"Pallet Town"},
+      "items": {
+        "home_potion": {
+          "localization": {"de":"Trank im Computer","en":"Potion at the computer"}
+        },
+        "pokedex": {
+          "localization": {"de":"Pokédex","en":"Pokédex"},
+          "story_items": [
+            {"category":"misc","id":"oaks_parcel"}
+          ]
+        },
+        "map": {
+          "localization": {"de":"Karte","en":"Map"}
+        },
+        "pokeballs": {
+          "localization": {"de":"5 Pokébälle","en":"5 Pokéballs"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_22","id":"rival_1"}
+            ]
+          }
+        }
+      },
+      "pokemon": {
+        "starter": {
+          "localization": {"de":"Pikachu","en":"Pikachu"}
+        }
+      }
+    },
+    "pewter_city": {
+      "localization": {"de":"","en":""}
+    },
+    "power_plant": {
+      "localization": {"de":"","en":""}
+    },
+    "rock_tunnel": {
+      "localization": {"de":"","en":""}
+    },
+    "route_01": {
+      "localization": {"de":"","en":""}
+    },
+    "route_02": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "viridian_forest": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "route_03": {
+      "localization": {"de":"","en":""}
+    },
+    "route_04": {
+      "localization": {"de":"","en":""}
+    },
+    "route_05": {
+      "localization": {"de":"","en":""}
+    },
+    "route_06": {
+      "localization": {"de":"","en":""}
+    },
+    "route_07": {
+      "localization": {"de":"","en":""}
+    },
+    "route_08": {
+      "localization": {"de":"","en":""}
+    },
+    "route_09": {
+      "localization": {"de":"","en":""}
+    },
+    "route_10": {
+      "localization": {"de":"","en":""}
+    },
+    "route_11": {
+      "localization": {"de":"","en":""}
+    },
+    "route_12": {
+      "localization": {"de":"","en":""}
+    },
+    "route_13": {
+      "localization": {"de":"","en":""}
+    },
+    "route_14": {
+      "localization": {"de":"","en":""}
+    },
+    "route_15": {
+      "localization": {"de":"","en":""}
+    },
+    "route_16": {
+      "localization": {"de":"","en":""}
+    },
+    "route_17": {
+      "localization": {"de":"","en":""}
+    },
+    "route_18": {
+      "localization": {"de":"","en":""}
+    },
+    "route_19": {
+      "localization": {"de":"","en":""}
+    },
+    "route_20": {
+      "localization": {"de":"","en":""}
+    },
+    "route_21": {
+      "localization": {"de":"","en":""}
+    },
+    "route_22": {
+      "localization": {"de":"","en":""},
+      "trainers": {
+        "rival_1": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "route_23": {
+      "localization": {"de":"","en":""}
+    },
+    "route_24": {
+      "localization": {"de":"","en":""}
+    },
+    "route_25": {
+      "localization": {"de":"","en":""}
+    },
+    "saffron_city": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "silph_co": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "seafoam_islands": {
+      "localization": {"de":"","en":""}
+    },
+    "vermilion_city": {
+      "localization": {"de":"","en":""},
+      "locations": {
+        "ss_anne": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    },
+    "victory_road": {
+      "localization": {"de":"","en":""}
+    },
+    "viridian_city": {
+      "localization": {"de":"","en":""},
+      "items": {
+        "oaks_parcel": {
+          "localization": {"de":"","en":""}
+        }
+      }
+    }
+  }
+}

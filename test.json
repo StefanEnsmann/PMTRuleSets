@@ -1,0 +1,43 @@
+{
+  "name": "",
+  "game": "",
+  "pokedex":[],
+  "languages":[],
+  "story_items": [],
+  "locations": [
+    {
+      "id": "new_location_0",
+      "localization": {},
+      "items": [
+        {
+          "id": "new_item_0",
+          "localization": {}
+        }
+      ],
+      "pokemon": [
+        {
+          "id": "new_pokemon_0",
+          "localization": {}
+        }
+      ],
+      "trainers": [
+        {
+          "id": "new_trainer_0",
+          "localization": {}
+        }
+      ],
+      "trades": [
+        {
+          "id": "new_trade_0",
+          "localization": {}
+        }
+      ],
+      "locations": [
+        {
+          "id": "new_location_0",
+          "localization": {}
+        }
+      ]
+    }
+  ]
+}

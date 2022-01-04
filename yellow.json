@@ -1,0 +1,251 @@
+{
+  "name": "Base Game",
+  "game": "Pokémon Yellow",
+  "pokedex":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151],
+  "languages":["de","en"],
+  "story_items": [
+    {
+      "id": "badges",
+      "items": [
+        {"id":"boulder_badge","url":null,"localization":{"de":"","en":""}},
+        {"id":"cascade_badge","url":null,"localization":{"de":"","en":""}},
+        {"id":"thunder_badge","url":null,"localization":{"de":"","en":""}},
+        {"id":"rainbow_badge","url":null,"localization":{"de":"","en":""}},
+        {"id":"soul_badge","url":null,"localization":{"de":"","en":""}},
+        {"id":"marsh_badge","url":null,"localization":{"de":"","en":""}},
+        {"id":"volcano_badge","url":null,"localization":{"de":"","en":""}},
+        {"id":"earth_badge","url":null,"localization":{"de":"","en":""}}
+      ]
+    },
+    {
+      "id": "hidden_machines",
+      "items": [
+        {"id":"hm_01","url":null,"localization":{"de":"","en":""}},
+        {"id":"hm_02","url":null,"localization":{"de":"","en":""}},
+        {"id":"hm_03","url":null,"localization":{"de":"","en":""}},
+        {"id":"hm_04","url":null,"localization":{"de":"","en":""}},
+        {"id":"hm_05","url":null,"localization":{"de":"","en":""}}
+      ]
+    },
+    {
+      "id": "misc",
+      "items": [
+        {"id":"oaks_parcel","url":null,"localization":{"de":"","en":""}}
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "pallet_town",
+      "localization": {"de":"Alabastia","en":"Pallet Town"}
+    },
+    {
+      "id": "route_01",
+      "localization": {"de":"Route 1","en":"Route 1"}
+    },
+    {
+      "id": "viridian_city",
+      "localization": {"de":"Vertania City","en":"Viridian City"}
+    },
+    {
+      "id": "route_22",
+      "localization": {"de":"","en":""}
+    },
+    {
+      "id": "route_02",
+      "localization": {"de":"Route 2","en":"Route 2"},
+      "locations": [
+        {
+          "id": "viridian_forest",
+          "localization": {"de":"Vertania Wald","en":"Viridian Forest"}
+        }
+      ]
+    },
+    {
+      "id": "pewter_city",
+      "localization": {"de":"Marmoria City","en":"Pewter City"}
+    },
+    {
+      "id": "route_03",
+      "localization": {"de":"Route 3","en":"Route 3"}
+    },
+    {
+      "id": "mt_moon",
+      "localization": {"de":"Mondberg","en":"Mt. Moon"}
+    },
+    {
+      "id": "route_04",
+      "localization": {"de":"Route 4","en":"Route 4"}
+    },
+    {
+      "id": "cerulean_city",
+      "localization": {"de":"Azuria City","en":"Cerulean City"},
+      "locations": [
+        {
+          "id": "cerulean_cave",
+          "localization": {"de":"Azuria-Höhle","en":"Cerulean Cave"}
+        }
+      ]
+    },
+    {
+      "id": "route_24",
+      "localization": {"de":"Route 24","en":"Route 24"}
+    },
+    {
+      "id": "route_25",
+      "localization": {"de":"Route 25","en":"Route 25"}
+    },
+    {
+      "id": "route_05",
+      "localization": {"de":"Route 5","en":"Route 5"}
+    },
+    {
+      "id": "route_06",
+      "localization": {"de":"Route 6","en":"Route 6"}
+    },
+    {
+      "id": "vermilion_city",
+      "localization": {"de":"Orania City","en":"Vermilion City"},
+      "locations": [
+        {
+          "id": "ss_anne",
+          "localization": {"de":"MS Anne","en":"S.S. Anne"}
+        }
+      ]
+    },
+    {
+      "id": "route_11",
+      "localization": {"de":"Route 11","en":"Route 11"}
+    },
+    {
+      "id": "digletts_cave",
+      "localization": {"de":"Digda-Höhle","en":"Diglett's Cave"}
+    },
+    {
+      "id": "route_09",
+      "localization": {"de":"Route 9","en":"Route 9"}
+    },
+    {
+      "id": "power_plant",
+      "localization": {"de":"Kraftwerk","en":"Power Plant"}
+    },
+    {
+      "id": "rock_tunnel",
+      "localization": {"de":"Felstunnel","en":"Rock Tunnel"}
+    },
+    {
+      "id": "route_10",
+      "localization": {"de":"Route 10","en":"Route 10"}
+    },
+    {
+      "id": "lavender_town",
+      "localization": {"de":"Lavandia","en":"Lavender Town"},
+      "locations": [
+        {
+          "id": "pokemon_tower",
+          "localization": {"de":"Pokémon-Turm","en":"Pokémon Tower"}
+        }
+      ]
+    },
+    {
+      "id": "route_08",
+      "localization": {"de":"Route 8","en":"Route 8"}
+    },
+    {
+      "id": "route_07",
+      "localization": {"de":"Route 7","en":"Route 7"}
+    },
+    {
+      "id": "celadon_city",
+      "localization": {"de":"Prismania City","en":"Celadon City"},
+      "locations": [
+        {
+          "id": "team_rocket_hideout",
+          "localization": {"de":"Rocket-Versteck","en":"Team Rocket Hideout"}
+        }
+      ]
+    },
+    {
+      "id": "saffron_city",
+      "localization": {"de":"Saffronia City","en":"Saffron City"},
+      "locations": [
+        {
+          "id": "silph_co",
+          "localization": {"de":"Silph Co.","en":"Silph Co."}
+        }
+      ]
+    },
+    {
+      "id": "route_12",
+      "localization": {"de":"Route 12","en":"Route 12"}
+    },
+    {
+      "id": "route_13",
+      "localization": {"de":"Route 13","en":"Route 13"}
+    },
+    {
+      "id": "route_16",
+      "localization": {"de":"Route 16","en":"Route 16"}
+    },
+    {
+      "id": "route_17",
+      "localization": {"de":"Route 17","en":"Route 17"}
+    },
+    {
+      "id": "route_18",
+      "localization": {"de":"Route 18","en":"Route 18"}
+    },
+    {
+      "id": "fuchsia_city",
+      "localization": {"de":"Fuchsania City","en":"Fuchsia City"},
+      "locations": [
+        {
+          "id": "safari_zone",
+          "localization": {"de":"Safari Zone","en":"Safari Zone"}
+        }
+      ]
+    },
+    {
+      "id": "route_19",
+      "localization": {"de":"Route 19","en":"Route 19"}
+    },
+    {
+      "id": "route_20",
+      "localization": {"de":"Route 20","en":"Route 20"},
+      "locations": [
+        {
+          "id": "seafoam_islands",
+          "localization": {"de":"Seeschauminseln","en":"Seafoam Islands"}
+        }
+      ]
+    },
+    {
+      "id": "route_21",
+      "localization": {"de":"Route 21","en":"Route 21"}
+    },
+    {
+      "id": "cinnabar_island",
+      "localization": {"de":"Zinnoberinsel","en":"Cinnabar Island"},
+      "locations": [
+        {
+          "id": "pokemon_mansion",
+          "localization": {"de":"Pokémon-Villa","en":"Pokémon Mansion"}
+        }
+      ]
+    },
+    {
+      "id": "route_23",
+      "localization": {"de":"Route 23","en":"Route 23"},
+      "locations": [
+        {
+          "id": "victory_road",
+          "localization": {"de":"Siegesstraße","en":"Victory Road"}
+        }
+      ]
+    },
+    {
+      "id": "indigo_plateau",
+      "localization": {"de":"Indigo-Plateau","en":"Indigo Plateau"}
+    }
+  ]
+}
