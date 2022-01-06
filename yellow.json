@@ -1,7 +1,7 @@
 {
   "name": "Base Game",
   "game": "Pokémon Yellow",
-  "pokedex":[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152],
+  "pokedex":[5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155],
   "languages":["de","en"],
   "story_items": [
     {
@@ -22,51 +22,337 @@
       "id": "hidden_machines",
       "localization": {"de":"VMs","en":"HMs"},
       "items": [
-        {"id":"hm_01","url":null,"localization":{"de":"","en":""}},
-        {"id":"hm_02","url":null,"localization":{"de":"","en":""}},
-        {"id":"hm_03","url":null,"localization":{"de":"","en":""}},
-        {"id":"hm_04","url":null,"localization":{"de":"","en":""}},
-        {"id":"hm_05","url":null,"localization":{"de":"","en":""}}
+        {"id":"hm_01","url":null,"localization":{"de":"VM 01","en":"HM 01"}},
+        {"id":"hm_02","url":null,"localization":{"de":"VM 02","en":"HM 02"}},
+        {"id":"hm_03","url":null,"localization":{"de":"VM 03","en":"HM 03"}},
+        {"id":"hm_04","url":null,"localization":{"de":"VM 04","en":"HM 04"}},
+        {"id":"hm_05","url":null,"localization":{"de":"VM 05","en":"HM 05"}}
       ]
     },
     {
       "id": "misc",
       "localization": {"de":"Sonstiges","en":"Misc"},
       "items": [
-        {"id":"oaks_parcel","url":null,"localization":{"de":"","en":""}}
+        {"id":"oaks_parcel","url":null,"localization":{"de":"Eichs Paket","en":"Oak's Parcel"}},
+        {"id":"pokedex","url":null,"localization":{"de":"Pokédex","en":"Pokédex"}}
       ]
     }
   ],
   "locations": [
     {
       "id": "pallet_town",
-      "localization": {"de":"Alabastia","en":"Pallet Town"}
+      "localization": {"de":"Alabastia","en":"Pallet Town"},
+      "items": [
+        {
+          "id": "potion",
+          "localization": {"de":"Trank (PC)","en":"Potion (PC)"}
+        },
+        {
+          "id": "map",
+          "localization": {"de":"Karte","en":"Map"},
+          "conditions": {
+            "story_items": [
+              {"category":"misc","id":"pokedex"}
+            ]
+          }
+        },
+        {
+          "id": "pokédex",
+          "localization": {"de":"Pokédex","en":"Pokédex"},
+          "conditions": {
+            "story_items": [
+              {"category":"misc","id":"oaks_parcel"}
+            ]
+          }
+        },
+        {
+          "id": "pokeballs",
+          "localization": {"de":"5 Pokébälle","en":"5 Pokéballs"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_22","id":"rival_1"}
+            ]
+          }
+        }
+      ],
+      "pokemon": [
+        {
+          "id": "starter",
+          "localization": {"de":"Starter Pokémon","en":"Starter Pokémon"}
+        }
+      ],
+      "trainers": [
+        {
+          "id": "rival",
+          "localization": {"de":"Rivale","en":"Rival"},
+          "conditions": {
+            "pokemon": [
+              {"location":"pallet_town","id":"starter"}
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "route_01",
-      "localization": {"de":"Route 1","en":"Route 1"}
+      "localization": {"de":"Route 1","en":"Route 1"},
+      "conditions": {
+        "trainers": [
+          {"location":"pallet_town","id":"rival"}
+        ]
+      },
+      "items": [
+        {
+          "id": "potion",
+          "localization": {"de":"Trank","en":"Potion"}
+        }
+      ]
     },
     {
       "id": "viridian_city",
-      "localization": {"de":"Vertania City","en":"Viridian City"}
+      "localization": {"de":"Vertania City","en":"Viridian City"},
+      "conditions": {
+        "trainers": [
+          {"location":"pallet_town","id":"rival"}
+        ]
+      },
+      "items": [
+        {
+          "id": "oaks_parcel",
+          "localization": {"de":"Eichs Paket","en":"Oak's Parcel"}
+        },
+        {
+          "id": "tm_42",
+          "localization": {"de":"TM 42","en":"TM 42"},
+          "conditions": {
+            "story_items": [
+              {
+                "type": "OR",
+                "conditions": [
+                  {
+                    "type": "AND",
+                    "conditions": [
+                      {"category":"badges","id":"cascade_badge"},
+                      {"category":"hidden_machines","id":"hm_01"}
+                    ]
+                  },
+                  {
+                    "type": "AND",
+                    "conditions": [
+                      {"category":"badges","id":"soul_badge"},
+                      {"category":"hidden_machines","id":"hm_03"}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "potion",
+          "localization": {"de":"Trank","en":"Potion"}
+        }
+      ],
+      "locations": [
+        {
+          "id": "viridian_gym",
+          "localization": {"de":"Vertania Arena","en":"Viridian Gym (TODO)"},
+          "conditions": {
+            "story_items": [
+              {"category":"badges","id":"volcano_badge"}
+            ]
+          },
+          "items": [
+            {
+              "id": "revive",
+              "localization": {"de":"Beleber","en":"Revive"}
+            },
+            {
+              "id": "tm_27",
+              "localization": {"de":"TM 27","en":"TM 27"}
+            }
+          ],
+          "trainers": [
+            {
+              "id": "tamer_1",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "black_belt_1",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "trainer_1",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "tamer_2",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "black_belt_2",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "trainer_2",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "trainer_3",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "black_belt_3",
+              "localization": {"de":"","en":""}
+            },
+            {
+              "id": "giovanni",
+              "localization": {"de":"Giovanni","en":"Giovanni"}
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "route_22",
-      "localization": {"de":"","en":""}
+      "localization": {"de":"","en":""},
+      "conditions": {
+        "trainers": [
+          {"location":"pallet_town","id":"rival"}
+        ]
+      },
+      "trainers": [
+        {
+          "id": "rival_1",
+          "localization": {"de":"Rivale (Erster Kampf)","en":"Rival (First Battle)"},
+          "conditions": {
+            "story_items": [
+              {"category":"misc","id":"pokedex"},
+              {
+                "type": "NOT",
+                "conditions": [
+                  {"category":"badges","id":"boulder_badge"}
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "rival_2",
+          "localization": {"de":"Rivale (Zweiter Kampf)","en":"Rival (Second Fight)"},
+          "conditions": {
+            "story_items": [
+              {"category":"badges","id":"earth_badge"}
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "route_02",
       "localization": {"de":"Route 2","en":"Route 2"},
+      "conditions": {
+        "trainers": [
+          {"location":"pallet_town","id":"rival"}
+        ]
+      },
+      "items": [
+        {
+          "id": "hm_05",
+          "localization": {"de":"VM 05","en":"HM 05"},
+          "conditions": {
+            "story_items": [
+              {"category":"badges","id":"cascade_badge"},
+              {"category":"hidden_machines","id":"hm_01"}
+            ]
+          }
+        },
+        {
+          "id": "hp_up",
+          "localization": {"de":"KP Plus","en":"HP Up"},
+          "conditions": {
+            "story_items": [
+              {"category":"badges","id":"cascade_badge"},
+              {"category":"hidden_machines","id":"hm_01"}
+            ]
+          }
+        },
+        {
+          "id": "moonstone",
+          "localization": {"de":"Mondstein","en":"Moonstone"},
+          "conditions": {
+            "story_items": [
+              {"category":"badges","id":"cascade_badge"},
+              {"category":"hidden_machines","id":"hm_01"}
+            ]
+          }
+        }
+      ],
+      "trades": [
+        {
+          "id": "mr_mime_for_clefairy",
+          "localization": {"de":"Pantimos für Piepi","en":"Mr. Mime for Clefairy (TODO)"}
+        }
+      ],
       "locations": [
         {
           "id": "viridian_forest",
-          "localization": {"de":"Vertania Wald","en":"Viridian Forest"}
+          "localization": {"de":"Vertania Wald","en":"Viridian Forest"},
+          "items": [
+            {
+              "id": "antidote",
+              "localization": {"de":"Gegengift (Südlicher Baum, Versteckt)","en":"Antidote (Southern Tree, Hidden)"}
+            },
+            {
+              "id": "pokeball",
+              "localization": {"de":"Pokéball (Südwesten)","en":"Pokéball (South West)"}
+            },
+            {
+              "id": "potion_1",
+              "localization": {"de":"Trank (Nordosten)","en":"Potion (North East)"}
+            },
+            {
+              "id": "potion_2",
+              "localization": {"de":"Trank (Nordwesten)","en":"Potion (North West)"}
+            },
+            {
+              "id": "potion_3",
+              "localization": {"de":"Trank (Westlich Vom Letzten Trainer, Versteckt)","en":"Potion (West Of Last Trainer, Hidden)"}
+            }
+          ],
+          "trainers": [
+            {
+              "id": "lass",
+              "localization": {"de":"Göre","en":"Lass"}
+            },
+            {
+              "id": "bug_catcher_1",
+              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+            },
+            {
+              "id": "bug_catcher_2",
+              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+            },
+            {
+              "id": "bug_catcher_3",
+              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+            },
+            {
+              "id": "bug_catcher_4",
+              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+            }
+          ]
         }
       ]
     },
     {
       "id": "pewter_city",
-      "localization": {"de":"Marmoria City","en":"Pewter City"}
+      "localization": {"de":"Marmoria City","en":"Pewter City"},
+      "conditions": {
+        "trainers": [
+          {"location":"route_02.viridian_forest","id":"bug_catcher_4"}
+        ]
+      }
     },
     {
       "id": "route_03",
