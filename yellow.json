@@ -34,7 +34,8 @@
       "localization": {"de":"Sonstiges","en":"Misc"},
       "items": [
         {"id":"oaks_parcel","url":null,"localization":{"de":"Eichs Paket","en":"Oak's Parcel"}},
-        {"id":"pokedex","url":null,"localization":{"de":"Pokédex","en":"Pokédex"}}
+        {"id":"pokedex","url":null,"localization":{"de":"Pokédex","en":"Pokédex"}},
+        {"id":"fossil","url":null,"localization":{"de":"Fossil","en":"Fossil"}}
       ]
     }
   ],
@@ -322,24 +323,24 @@
           ],
           "trainers": [
             {
-              "id": "lass",
-              "localization": {"de":"Göre","en":"Lass"}
+              "id": "lass_sw",
+              "localization": {"de":"Göre (Südwesten)","en":"Lass (South West)"}
             },
             {
-              "id": "bug_catcher_1",
-              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+              "id": "bug_catcher_e",
+              "localization": {"de":"Käfersammler (Osten)","en":"Bug Catcher (East)"}
             },
             {
-              "id": "bug_catcher_2",
-              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+              "id": "bug_catcher_ne",
+              "localization": {"de":"Käfersammler (Nordosten)","en":"Bug Catcher (North East)"}
             },
             {
-              "id": "bug_catcher_3",
-              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+              "id": "bug_catcher_c",
+              "localization": {"de":"Käfersammler (Zentrum)","en":"Bug Catcher (Centre)"}
             },
             {
-              "id": "bug_catcher_4",
-              "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+              "id": "bug_catcher_nw",
+              "localization": {"de":"Käfersammler (Nordwesten)","en":"Bug Catcher (North West)"}
             }
           ]
         }
@@ -350,7 +351,7 @@
       "localization": {"de":"Marmoria City","en":"Pewter City"},
       "conditions": {
         "trainers": [
-          {"location":"route_02.viridian_forest","id":"bug_catcher_4"}
+          {"location":"route_02.viridian_forest","id":"bug_catcher_nw"}
         ]
       },
       "items": [
@@ -376,6 +377,10 @@
       ],
       "trainers": [
         {
+          "id": "camper",
+          "localization": {"de":"Pfadfinder","en":"Camper"}
+        },
+        {
           "id": "brock",
           "localization": {"de":"Rocko","en":"Brock"}
         }
@@ -383,19 +388,282 @@
     },
     {
       "id": "route_03",
-      "localization": {"de":"Route 3","en":"Route 3"}
+      "localization": {"de":"Route 3","en":"Route 3"},
+      "conditions": {
+        "trainers": [
+          {"location":"pewter_city","id":"brock"}
+        ]
+      },
+      "trainers": [
+        {
+          "id": "lass_w",
+          "localization": {"de":"Göre (Westen)","en":"Lass (West)"}
+        },
+        {
+          "id": "bug_catcher_w",
+          "localization": {"de":"Käfersammler (Westen)","en":"Bug Catcher (West)"}
+        },
+        {
+          "id": "youngster_nw",
+          "localization": {"de":"Teenager (Nordwesten)","en":"Youngster (North West)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_03","id":"bug_catcher_w"}
+            ]
+          }
+        },
+        {
+          "id": "bug_catcher_n",
+          "localization": {"de":"Käfersammler (Norden)","en":"Bug Catcher (North)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_03","id":"youngster_nw"}
+            ]
+          }
+        },
+        {
+          "id": "youngster_c",
+          "localization": {"de":"Teenager (Zentrum)","en":"Youngster (Centre)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_03","id":"youngster_nw"}
+            ]
+          }
+        },
+        {
+          "id": "lass_n",
+          "localization": {"de":"Göre (Norden)","en":"Lass (North)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_03","id":"youngster_nw"}
+            ]
+          }
+        },
+        {
+          "id": "bug_catcher_e",
+          "localization": {"de":"Käfersammler (Osten)","en":"Bug Catcher (East)"}
+        },
+        {
+          "id": "lass_e",
+          "localization": {"de":"Göre (Osten)","en":"Lass (East)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_03","id":"bug_catcher_e"}
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "mt_moon",
-      "localization": {"de":"Mondberg","en":"Mt. Moon"}
+      "localization": {"de":"Mondberg","en":"Mt. Moon"},
+      "conditions": {
+        "trainers": [
+          {"location":"route_03","id":"bug_catcher_e"}
+        ]
+      },
+      "locations": [
+        {
+          "id": "1f",
+          "localization": {"de":"1F","en":"1F"},
+          "items": [
+            {
+              "id": "tm_12_sw",
+              "localization": {"de":"TM 12 (Südwesten)","en":"TM 12 (South West)"}
+            },
+            {
+              "id": "potion_sw",
+              "localization": {"de":"Trank (Südwesten)","en":"Potion (South West)"}
+            },
+            {
+              "id": "potion_s",
+              "localization": {"de":"Trank (Süden)","en":"Potion (South)"}
+            },
+            {
+              "id": "rare_candy_se",
+              "localization": {"de":"Sonderbonbon (Südosten)","en":"Rare Candy (South East)"}
+            },
+            {
+              "id": "escape_rope_e",
+              "localization": {"de":"Fluchtseil (Osten)","en":"Escape Rope (East)"}
+            },
+            {
+              "id": "moonstone_nw",
+              "localization": {"de":"Mondstein (Nordwesten)","en":"Moonstone (North West)"}
+            }
+          ],
+          "trainers": [
+            {
+              "id": "lass_c",
+              "localization": {"de":"Göre (Zentrum)","en":"Lass (Centre)"}
+            },
+            {
+              "id": "bug_catcher_w",
+              "localization": {"de":"Käfersammler (Westen)","en":"Bug Catcher (West)"}
+            },
+            {
+              "id": "super_nerd_s",
+              "localization": {"de":"Streber (Süden)","en":"Super Nerd (South)"}
+            },
+            {
+              "id": "bug_catcher_se",
+              "localization": {"de":"Käfersammler (Südosten)","en":"Bug Catcher (South East)"}
+            },
+            {
+              "id": "lass_ne",
+              "localization": {"de":"Göre (Nordosten)","en":"Lass (North East)"}
+            },
+            {
+              "id": "youngster_c",
+              "localization": {"de":"Teenager (Zentrum)","en":"Youngster (Centre)"}
+            },
+            {
+              "id": "hiker_nw",
+              "localization": {"de":"Wanderer (Nordwesten)","en":"Hiker (North West)"}
+            }
+          ]
+        },
+        {
+          "id": "b2f",
+          "localization": {"de":"B2F","en":"B2F"},
+          "items": [
+            {
+              "id": "tm_01_ne",
+              "localization": {"de":"TM 01 (Nordosten)","en":"TM 01 (North East)"}
+            },
+            {
+              "id": "ether_ne",
+              "localization": {"de":"Äther (Nordosten, Versteckt)","en":"Ether (North East, Hidden)"},
+              "conditions": {
+                "trainers": [
+                  {"location":"mt_moon.b2f","id":"rocket_ne"}
+                ]
+              }
+            },
+            {
+              "id": "hp_up_c",
+              "localization": {"de":"KP Plus (Zentrum)","en":"HP Up (Centre)"}
+            },
+            {
+              "id": "moonstone_nw",
+              "localization": {"de":"Mondstein (Nordwesten, Versteckt)","en":"Moonstone (North West, Hidden)"}
+            },
+            {
+              "id": "dome_fossil",
+              "localization": {"de":"Domfossil","en":"Dome Fossil"},
+              "conditions": {
+                "trainers": [
+                  {"location":"mt_moon.b2f","id":"super_nerd_nw"}
+                ],
+                "story_items": [
+                  {
+                    "type": "NOT",
+                    "conditions": [
+                      {"category":"misc","id":"fossil"}
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "helix_fossil",
+              "localization": {"de":"Helixfossil","en":"Helix Fossil"},
+              "conditions": {
+                "trainers": [
+                  {"location":"mt_moon.b2f","id":"super_nerd_nw"}
+                ],
+                "story_items": [
+                  {
+                    "type": "NOT",
+                    "conditions": [
+                      {"category":"misc","id":"fossil"}
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "trainers": [
+            {
+              "id": "rocket_ne",
+              "localization": {"de":"Team Rocket (Nordosten)","en":"Rocket (North East)"}
+            },
+            {
+              "id": "rocket_c",
+              "localization": {"de":"Team Rocket (Zentrum)","en":"Rocket (Centre)"}
+            },
+            {
+              "id": "super_nerd_nw",
+              "localization": {"de":"Streber (Nordwesten)","en":"Super Nerd (North West)"}
+            },
+            {
+              "id": "jessie_james",
+              "localization": {"de":"Team Rocket (Nordwesten)","en":"Team Rocket (North West)"},
+              "conditions": {
+                "trainers": [
+                  {"location":"mt_moon.b2f","id":"super_nerd_nw"}
+                ]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "route_04",
-      "localization": {"de":"Route 4","en":"Route 4"}
+      "localization": {"de":"Route 4","en":"Route 4"},
+      "conditions": {
+        "trainers": [
+          {"location":"route_03","id":"bug_catcher_e"}
+        ]
+      },
+      "items": [
+        {
+          "id": "great_ball_c",
+          "localization": {"de":"Superball (Zentrum, Versteckt)","en":"Great Ball (Centre, Hidden)"},
+          "conditions": {
+            "trainers": [
+              {"location":"mt_moon.b2f","id":"jessie_james"}
+            ]
+          }
+        },
+        {
+          "id": "tm_04_e",
+          "localization": {"de":"TM 04 (Osten)","en":"TM 04 (East)"},
+          "conditions": {
+            "trainers": [
+              {"location":"mt_moon.b2f","id":"jessie_james"}
+            ]
+          }
+        }
+      ],
+      "pokemon": [
+        {
+          "id": "magikarp",
+          "localization": {"de":"Karpador (Pokémon-Center)","en":"Magikarp (Pokémon Center)"}
+        }
+      ],
+      "trainers": [
+        {
+          "id": "lass_ne",
+          "localization": {"de":"Göre (Nordosten)","en":"Lass (North East) TODO"},
+          "conditions": {
+            "story_items": [
+              {"category":"badges","id":"soul_badge"},
+              {"category":"hidden_machines","id":"hm_03"}
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "cerulean_city",
       "localization": {"de":"Azuria City","en":"Cerulean City"},
+      "conditions": {
+        "trainers": [
+          {"location":"mt_moon.b2f","id":"jessie_james"}
+        ]
+      },
       "locations": [
         {
           "id": "cerulean_cave",
