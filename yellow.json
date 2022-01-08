@@ -1060,7 +1060,18 @@
           "localization": {"de":"MS Anne","en":"S.S. Anne"},
           "conditions": {
             "story_items": [
-              {"category":"misc","id":"ss_ticket"}
+              {
+                "type": "AND",
+                "conditions": [
+                  {"category":"misc","id":"ss_ticket"},
+                  {
+                    "type": "NOT",
+                    "conditions": [
+                      {"category":"hidden_machines","id":"hm_01"}
+                    ]
+                  }
+                ]
+              }
             ]
           },
           "locations": [
@@ -1265,16 +1276,65 @@
         "trainers": [
           {"location":"route_06","id":"jr_trainer_s_2"}
         ]
-      }
-    },
-    {
-      "id": "digletts_cave",
-      "localization": {"de":"Digda-Höhle","en":"Diglett's Cave"},
-      "conditions": {
-        "trainers": [
-          {"location":"route_06","id":"jr_trainer_s_2"}
-        ]
-      }
+      },
+      "items": [
+        {
+          "id": "escape_rope",
+          "localization": {"de":"Fluchtseil (Osten, Versteckt)","en":"Escape Rope (East, Hidden)"}
+        },
+        {
+          "id": "itemfinder",
+          "localization": {"de":"Detektor (30+ Pokémon)","en":"Itemfinder (30+ Pokémon)"}
+        }
+      ],
+      "trainers": [
+        {
+          "id": "youngster_nw",
+          "localization": {"de":"Teenager (Nordwesten)","en":"Youngster (North West)"}
+        },
+        {
+          "id": "youngster_w",
+          "localization": {"de":"Teenager (Westen)","en":"Youngster (West)"}
+        },
+        {
+          "id": "gambler_sw",
+          "localization": {"de":"Spieler (Südwesten)","en":"Gambler (South West)"}
+        },
+        {
+          "id": "gambler_n",
+          "localization": {"de":"Spieler (Norden)","en":"Gambler (North)"}
+        },
+        {
+          "id": "gambler_c",
+          "localization": {"de":"Spieler (Zentrum)","en":"Gambler (Center)"}
+        },
+        {
+          "id": "youngster_c",
+          "localization": {"de":"Teenager (Zentrum)","en":"Youngster (Center)"}
+        },
+        {
+          "id": "engineer_c",
+          "localization": {"de":"Mechaniker (Zentrum)","en":"Engineer (Center)"}
+        },
+        {
+          "id": "youngster_ne",
+          "localization": {"de":"Teenager (Nordosten)","en":"Youngster (North East)"}
+        },
+        {
+          "id": "gambler_e",
+          "localization": {"de":"Spieler (Osten)","en":"Gambler (East)"}
+        },
+        {
+          "id": "engineer_se",
+          "localization": {"de":"Mechaniker (Südosten)","en":"Engineer (South East)"}
+        }
+      ],
+      "trades": [
+        {
+          "id": "dugtrio_for_lickitung",
+          "localization": {"de":"Digdri Für Schlurp","en":"Dugtrio For Lickitung"}
+        }
+      ]
     },
     {
       "id": "route_09",
@@ -1348,7 +1408,13 @@
     },
     {
       "id": "route_18",
-      "localization": {"de":"Route 18","en":"Route 18"}
+      "localization": {"de":"Route 18","en":"Route 18"},
+      "trades": [
+        {
+          "id": "parasect_for_tangela",
+          "localization": {"de":"Parasek Für Tangela","en":"Parasect For Tangela"}
+        }
+      ]
     },
     {
       "id": "fuchsia_city",
@@ -1381,6 +1447,20 @@
     {
       "id": "cinnabar_island",
       "localization": {"de":"Zinnoberinsel","en":"Cinnabar Island"},
+      "trades": [
+        {
+          "id": "rhydon_for_golduck",
+          "localization": {"de":"Rizeros Für Entoron","en":"Rhydon For Golduck"}
+        },
+        {
+          "id": "dewgong_for_growlithe",
+          "localization": {"de":"Jugong Für Fukano","en":"Dewgong For Growlithe"}
+        },
+        {
+          "id": "muk_for_kangaskhan",
+          "localization": {"de":"Sleimok Für Kangama","en":"Muk For Kangaskhan"}
+        }
+      ],
       "locations": [
         {
           "id": "pokemon_mansion",
