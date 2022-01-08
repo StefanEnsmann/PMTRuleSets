@@ -35,7 +35,8 @@
       "items": [
         {"id":"oaks_parcel","url":null,"localization":{"de":"Eichs Paket","en":"Oak's Parcel"}},
         {"id":"pokedex","url":null,"localization":{"de":"Pokédex","en":"Pokédex"}},
-        {"id":"fossil","url":null,"localization":{"de":"Fossil","en":"Fossil"}}
+        {"id":"fossil","url":null,"localization":{"de":"Fossil","en":"Fossil"}},
+        {"id":"bike_voucher","url":null,"localization":{"de":"Radcoupon","en":"Bike Voucher"}}
       ]
     }
   ],
@@ -664,6 +665,72 @@
           {"location":"mt_moon.b2f","id":"jessie_james"}
         ]
       },
+      "items": [
+        {
+          "id": "rare_candy_nw",
+          "localization": {"de":"Sonderbonbon (Nordwesten, Versteckt)","en":"Rare Candy (North West, Hidden)"}
+        },
+        {
+          "id": "tm_28",
+          "localization": {"de":"TM 28","en":"TM 28"},
+          "conditions": {
+            "trainers": [
+              {"location":"cerulean_city","id":"rocket"}
+            ]
+          }
+        },
+        {
+          "id": "bicycle",
+          "localization": {"de":"Fahrrad","en":"Bicycle"},
+          "conditions": {
+            "story_items": [
+              {"category":"misc","id":"bike_voucher"}
+            ]
+          }
+        },
+        {
+          "id": "tm_11",
+          "localization": {"de":"TM 11","en":"TM 11"},
+          "conditions": {
+            "trainers": [
+              {"location":"cerulean_city","id":"misty"}
+            ]
+          }
+        }
+      ],
+      "pokemon": [
+        {
+          "id": "bulbasaur",
+          "localization": {"de":"Bisasam (Pikachu > 146)","en":"Bulbasaur (Pikachu > 146)"}
+        }
+      ],
+      "trainers": [
+        {
+          "id": "swimmer",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "jr_trainer",
+          "localization": {"de":"Pfadfinderin","en":"Jr. Trainer♀"}
+        },
+        {
+          "id": "misty",
+          "localization": {"de":"","en":""},
+          "conditions": {
+            "trainers": [
+              {"location":"cerulean_city","id":"jr_trainer"}
+            ]
+          }
+        },
+        {
+          "id": "rival",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "rocket",
+          "localization": {"de":"Rocket Rüpel","en":"Rocket"}
+        }
+      ],
       "locations": [
         {
           "id": "cerulean_cave",
@@ -673,11 +740,112 @@
     },
     {
       "id": "route_24",
-      "localization": {"de":"Route 24","en":"Route 24"}
+      "localization": {"de":"Route 24","en":"Route 24"},
+      "conditions": {
+        "trainers": [
+          {"location":"cerulean_city","id":"rival"}
+        ]
+      },
+      "items": [
+        {
+          "id": "nugget",
+          "localization": {"de":"Nugget","en":"Nugget"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"jr_trainer_1"}
+            ]
+          }
+        },
+        {
+          "id": "tm_45",
+          "localization": {"de":"TM 45 (Nordwesten)","en":"TM 45 (North West)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"rocket"}
+            ]
+          }
+        }
+      ],
+      "pokemon": [
+        {
+          "id": "charmander",
+          "localization": {"de":"","en":""},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"rocket"}
+            ]
+          }
+        }
+      ],
+      "trainers": [
+        {
+          "id": "bug_catcher",
+          "localization": {"de":"Käfersammler","en":"Bug Catcher"}
+        },
+        {
+          "id": "lass_1",
+          "localization": {"de":"Göre 1","en":"Lass 1"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"bug_catcher"}
+            ]
+          }
+        },
+        {
+          "id": "youngster",
+          "localization": {"de":"Teenager","en":"Youngster"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"lass_1"}
+            ]
+          }
+        },
+        {
+          "id": "lass_2",
+          "localization": {"de":"Göre 2","en":"Lass 2"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"youngster"}
+            ]
+          }
+        },
+        {
+          "id": "jr_trainer_1",
+          "localization": {"de":"Pfadfinder","en":"Jr. Trainer♂"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"lass_2"}
+            ]
+          }
+        },
+        {
+          "id": "rocket",
+          "localization": {"de":"Rocket Rüpel","en":"Rocket"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"jr_trainer_1"}
+            ]
+          }
+        },
+        {
+          "id": "jr_trainer_2",
+          "localization": {"de":"Pfadfinder (Gras)","en":"Jr. Trainer♂ (Grass)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_24","id":"rocket"}
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "route_25",
-      "localization": {"de":"Route 25","en":"Route 25"}
+      "localization": {"de":"Route 25","en":"Route 25"},
+      "conditions": {
+        "trainers": [
+          {"location":"route_24","id":"rocket"}
+        ]
+      }
     },
     {
       "id": "route_05",
