@@ -1371,69 +1371,274 @@
       "items": [
         {
           "id": "tm_30",
-          "localization": {"de":"TM 30","en":"TM 30"}
+          "localization": {"de":"TM 30","en":"TM 30"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"jr_trainer_w"}
+            ]
+          }
         },
         {
           "id": "ether",
-          "localization": {"de":"Äther (Versteckt)","en":"Ether (Hidden)"}
+          "localization": {"de":"Äther (Versteckt)","en":"Ether (Hidden)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"bug_catcher_n"}
+            ]
+          }
         }
       ],
       "trainers": [
         {
-          "id": "jr_trainer_1",
-          "localization": {"de":"","en":""}
+          "id": "jr_trainer_w",
+          "localization": {"de":"Pfadfinderin (Westen)","en":"Jr. Trainer♀ (West)"}
         },
         {
-          "id": "hiker_1",
-          "localization": {"de":"","en":""}
+          "id": "hiker_sw",
+          "localization": {"de":"Wanderer (Südwesten)","en":"Hiker (South West)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"jr_trainer_w"}
+            ]
+          }
         },
         {
-          "id": "youngster",
-          "localization": {"de":"","en":""}
+          "id": "youngster_c",
+          "localization": {"de":"Teenager (Zentrum)","en":"Youngster (Center)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"jr_trainer_w"}
+            ]
+          }
         },
         {
-          "id": "bug_catcher_1",
-          "localization": {"de":"","en":""}
+          "id": "bug_catcher_n",
+          "localization": {"de":"Käfersammler (Norden)","en":"Bug Catcher (North)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"youngster_c"}
+            ]
+          }
         },
         {
-          "id": "hiker_2",
-          "localization": {"de":"","en":""}
+          "id": "hiker_s",
+          "localization": {"de":"Wanderer (Süden)","en":"Hiker (South)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"jr_trainer_w"}
+            ]
+          }
         },
         {
-          "id": "bug_catcher_2",
-          "localization": {"de":"","en":""}
+          "id": "bug_catcher_c",
+          "localization": {"de":"Käfersammler (Zentrum)","en":"Bug Catcher (Center)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"jr_trainer_w"}
+            ]
+          }
         },
         {
-          "id": "jr_trainer_2",
-          "localization": {"de":"","en":""}
+          "id": "jr_trainer_c",
+          "localization": {"de":"Pfadfinder (Zentrum)","en":"Jr. Trainer♂ (Center)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"bug_catcher_c"}
+            ]
+          }
         },
         {
-          "id": "hiker_3",
-          "localization": {"de":"","en":""}
+          "id": "hiker_n",
+          "localization": {"de":"Wanderer (Norden)","en":"Hiker (North)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"bug_catcher_c"}
+            ]
+          }
         },
         {
-          "id": "jr_trainer_3",
-          "localization": {"de":"","en":""}
+          "id": "jr_trainer_e",
+          "localization": {"de":"Pfadfinderin (Osten)","en":"Jr. Trainer♀ (East)"},
+          "conditions": {
+            "trainers": [
+              {"location":"route_09","id":"bug_catcher_c"}
+            ]
+          }
         }
       ]
     },
     {
-      "id": "power_plant",
-      "localization": {"de":"Kraftwerk","en":"Power Plant"},
-      "conditions": {
-        "story_items": [
-          {"category":"badges","id":"soul_badge"},
-          {"category":"hidden_machines","id":"hm_03"}
-        ]
-      }
-    },
-    {
-      "id": "rock_tunnel",
-      "localization": {"de":"Felstunnel","en":"Rock Tunnel"}
-    },
-    {
       "id": "route_10",
-      "localization": {"de":"Route 10","en":"Route 10"}
+      "localization": {"de":"Route 10","en":"Route 10"},
+      "conditions": {
+        "trainers": [
+          {"location":"route_09","id":"bug_catcher_c"}
+        ]
+      },
+      "items": [
+        {
+          "id": "super_potion",
+          "localization": {"de":"Supertrank (Norden, Versteckt)","en":"Super Potion (North, Hidden)"},
+          "conditions": {
+            "story_items": [
+              {"category":"hidden_machines","id":"hm_01"},
+              {"category":"badges","id":"cascade_badge"}
+            ]
+          }
+        },
+        {
+          "id": "max_ether",
+          "localization": {"de":"Top-Äther (Süden, Versteckt)","en":"Max Ether (South, Hidden)"}
+        }
+      ],
+      "trainers": [
+        {
+          "id": "jr_trainer_n",
+          "localization": {"de":"Pfadfinderin (Norden)","en":"Jr. Trainer♀ (North)"}
+        },
+        {
+          "id": "pokemaniac_n",
+          "localization": {"de":"Pokémaniac (Norden)","en":"PokéManiac (North)"},
+          "conditions": {
+            "story_items": [
+              {"category":"hidden_machines","id":"hm_03"},
+              {"category":"badges","id":"cascade_badge"}
+            ]
+          }
+        },
+        {
+          "id": "jr_trainer_s",
+          "localization": {"de":"Pfadfinderin (Süden)","en":"Jr. Trainer♀ (South)"}
+        },
+        {
+          "id": "hiker_s1",
+          "localization": {"de":"Wanderer (Süden)","en":"Hiker (South)"}
+        },
+        {
+          "id": "hiker_s2",
+          "localization": {"de":"Wanderer (Süden)","en":"Hiker (South)"}
+        },
+        {
+          "id": "pokemaniac_s",
+          "localization": {"de":"Pokémaniac (Süden)","en":"PokéManiac (South)"}
+        }
+      ],
+      "locations": [
+        {
+          "id": "rock_tunnel",
+          "localization": {"de":"Felstunnel","en":"Rock Tunnel"},
+          "locations": [
+            {
+              "id": "1f",
+              "localization": {"de":"1F","en":"1F"},
+              "trainers": [
+                {
+                  "id": "pokemaniac_n",
+                  "localization": {"de":"Pokémaniac (Norden)","en":"PokéManiac (North)"}
+                },
+                {
+                  "id": "hiker_nw",
+                  "localization": {"de":"Wanderer (Nordwesten)","en":"Hiker (North West)"},
+                  "conditions": {
+                    "trainers": [
+                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    ]
+                  }
+                },
+                {
+                  "id": "hiker_w",
+                  "localization": {"de":"Wanderer (Westen)","en":"Hiker (West)"}
+                },
+                {
+                  "id": "new_trainer_3",
+                  "localization": {"de":"","en":""}
+                },
+                {
+                  "id": "new_trainer_4",
+                  "localization": {"de":"","en":""}
+                },
+                {
+                  "id": "new_trainer_5",
+                  "localization": {"de":"","en":""}
+                },
+                {
+                  "id": "new_trainer_6",
+                  "localization": {"de":"","en":""}
+                },
+                {
+                  "id": "new_trainer_7",
+                  "localization": {"de":"","en":""}
+                },
+                {
+                  "id": "new_trainer_8",
+                  "localization": {"de":"","en":""}
+                }
+              ]
+            },
+            {
+              "id": "b1f",
+              "localization": {"de":"B1F","en":"B1F"},
+              "trainers": [
+                {
+                  "id": "pokemaniac_sw",
+                  "localization": {"de":"Pokémaniac (Südwesten)","en":"PokéManiac (South West)"},
+                  "conditions": {
+                    "trainers": [
+                      {"location":"route_10.rock_tunnel.1f","id":"pokemaniac_n"}
+                    ]
+                  }
+                },
+                {
+                  "id": "jr_trainer_s",
+                  "localization": {"de":"Pfadfinderin (Süden)","en":"Jr. Trainer♀ (South)"},
+                  "conditions": {
+                    "trainers": [
+                      {"location":"route_10.rock_tunnel.b1f","id":"pokemaniac_sw"}
+                    ]
+                  }
+                },
+                {
+                  "id": "pokemaniac_c",
+                  "localization": {"de":"Pokémaniac (Zentrum)","en":"PokéManiac (Center)"},
+                  "conditions": {
+                    "trainers": [
+                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    ]
+                  }
+                },
+                {
+                  "id": "hiker_e",
+                  "localization": {"de":"Wanderer (Osten)","en":"Hiker (East)"},
+                  "conditions": {
+                    "trainers": [
+                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    ]
+                  }
+                },
+                {
+                  "id": "hiker_ne",
+                  "localization": {"de":"Wanderer (Nordosten)","en":"Hiker (North East)"},
+                  "conditions": {
+                    "trainers": [
+                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "power_plant",
+          "localization": {"de":"Kraftwerk","en":"Power Plant"},
+          "conditions": {
+            "story_items": [
+              {"category":"hidden_machines","id":"hm_03"},
+              {"category":"badges","id":"soul_badge"}
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "lavender_town",
