@@ -1260,10 +1260,33 @@
               {"category":"hidden_machines","id":"hm_01"}
             ]
           },
+          "items": [
+            {
+              "id": "tm_24",
+              "localization": {"de":"TM 24","en":"TM 24"},
+              "conditions": {
+                "trainers": [
+                  {"location":"vermilion_city.vermilion_gym","id":"lt_surge"}
+                ]
+              }
+            }
+          ],
           "trainers": [
             {
+              "id": "sailor",
+              "localization": {"de":"Matrose","en":"Sailor"}
+            },
+            {
+              "id": "rocker",
+              "localization": {"de":"Rocker","en":"Rocker"}
+            },
+            {
+              "id": "gentleman",
+              "localization": {"de":"Gentleman","en":"Gentleman"}
+            },
+            {
               "id": "lt_surge",
-              "localization": {"de":"","en":""}
+              "localization": {"de":"Major Bob","en":"Lt. Surge"}
             }
           ]
         }
@@ -1338,11 +1361,71 @@
     },
     {
       "id": "route_09",
-      "localization": {"de":"Route 9","en":"Route 9"}
+      "localization": {"de":"Route 9","en":"Route 9"},
+      "conditions": {
+        "story_items": [
+          {"category":"hidden_machines","id":"hm_01"},
+          {"category":"badges","id":"cascade_badge"}
+        ]
+      },
+      "items": [
+        {
+          "id": "tm_30",
+          "localization": {"de":"TM 30","en":"TM 30"}
+        },
+        {
+          "id": "ether",
+          "localization": {"de":"Äther (Versteckt)","en":"Ether (Hidden)"}
+        }
+      ],
+      "trainers": [
+        {
+          "id": "jr_trainer_1",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "hiker_1",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "youngster",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "bug_catcher_1",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "hiker_2",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "bug_catcher_2",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "jr_trainer_2",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "hiker_3",
+          "localization": {"de":"","en":""}
+        },
+        {
+          "id": "jr_trainer_3",
+          "localization": {"de":"","en":""}
+        }
+      ]
     },
     {
       "id": "power_plant",
-      "localization": {"de":"Kraftwerk","en":"Power Plant"}
+      "localization": {"de":"Kraftwerk","en":"Power Plant"},
+      "conditions": {
+        "story_items": [
+          {"category":"badges","id":"soul_badge"},
+          {"category":"hidden_machines","id":"hm_03"}
+        ]
+      }
     },
     {
       "id": "rock_tunnel",
