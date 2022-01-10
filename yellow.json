@@ -55,27 +55,30 @@
           "id": "map",
           "localization": {"de":"Karte","en":"Map"},
           "conditions": {
-            "story_items": [
-              {"category":"misc","id":"pokedex"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.misc.pokedex"
+              ]
           }
         },
         {
           "id": "pokédex",
           "localization": {"de":"Pokédex","en":"Pokédex"},
           "conditions": {
-            "story_items": [
-              {"category":"misc","id":"oaks_parcel"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.misc.oaks_parcel"
+              ]
           }
         },
         {
           "id": "pokeballs",
           "localization": {"de":"5 Pokébälle","en":"5 Pokéballs"},
           "conditions": {
-            "trainers": [
-              {"location":"route_22","id":"rival_1"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.route_22.trainers.rival_1"
+              ]
           }
         }
       ],
@@ -90,9 +93,10 @@
           "id": "rival",
           "localization": {"de":"Rivale","en":"Rival"},
           "conditions": {
-            "pokemon": [
-              {"location":"pallet_town","id":"starter"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.pallet_town.pokemon.starter"
+              ]
           }
         }
       ]
@@ -101,9 +105,10 @@
       "id": "route_01",
       "localization": {"de":"Route 1","en":"Route 1"},
       "conditions": {
-        "trainers": [
-          {"location":"pallet_town","id":"rival"}
-        ]
+          "logic": "AND",
+          "list": [
+            "locations.pallet_town.trainers.rival"
+          ]
       },
       "items": [
         {
@@ -116,9 +121,10 @@
       "id": "viridian_city",
       "localization": {"de":"Vertania City","en":"Viridian City"},
       "conditions": {
-        "trainers": [
-          {"location":"pallet_town","id":"rival"}
-        ]
+          "logic": "AND",
+          "list": [
+            "locations.pallet_town.trainers.rival"
+          ]
       },
       "items": [
         {
@@ -129,22 +135,23 @@
           "id": "tm_42",
           "localization": {"de":"TM 42","en":"TM 42"},
           "conditions": {
-            "story_items": [
+            "logic": "AND",
+            "list": [
               {
-                "type": "OR",
-                "conditions": [
+                "logic": "OR",
+                "list": [
                   {
-                    "type": "AND",
-                    "conditions": [
-                      {"category":"badges","id":"cascade_badge"},
-                      {"category":"hidden_machines","id":"hm_01"}
+                    "logic": "AND",
+                    "list": [
+                      "story_items.badges.cascade_badge",
+                      "story_items.hidden_machines.hm_01"
                     ]
                   },
                   {
-                    "type": "AND",
-                    "conditions": [
-                      {"category":"badges","id":"soul_badge"},
-                      {"category":"hidden_machines","id":"hm_03"}
+                    "logic": "AND",
+                    "list": [
+                      "story_items.badges.soul_badge",
+                      "story_items.hidden_machines.hm_03"
                     ]
                   }
                 ]
@@ -162,9 +169,10 @@
           "id": "viridian_gym",
           "localization": {"de":"Vertania Arena","en":"Viridian Gym (TODO)"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"volcano_badge"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.badges.volcano_badge"
+              ]
           },
           "items": [
             {
@@ -221,33 +229,36 @@
       "id": "route_22",
       "localization": {"de":"","en":""},
       "conditions": {
-        "trainers": [
-          {"location":"pallet_town","id":"rival"}
-        ]
+          "logic": "AND",
+          "list": [
+            "locations.pallet_town.trainers.rival"
+          ]
       },
       "trainers": [
         {
           "id": "rival_1",
           "localization": {"de":"Rivale (Erster Kampf)","en":"Rival (First Battle)"},
           "conditions": {
-            "story_items": [
-              {"category":"misc","id":"pokedex"},
-              {
-                "type": "NOT",
-                "conditions": [
-                  {"category":"badges","id":"boulder_badge"}
-                ]
-              }
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.misc.pokedex",
+                {
+                    "logic": "NOT",
+                    "list": [
+                      "story_items.badges.boulder_badge"
+                    ]
+                }
+              ]
           }
         },
         {
           "id": "rival_2",
           "localization": {"de":"Rivale (Zweiter Kampf)","en":"Rival (Second Fight)"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"earth_badge"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.badges.earth_badge"
+              ]
           }
         }
       ]
@@ -256,39 +267,43 @@
       "id": "route_02",
       "localization": {"de":"Route 2","en":"Route 2"},
       "conditions": {
-        "trainers": [
-          {"location":"pallet_town","id":"rival"}
-        ]
+          "logic": "AND",
+          "list": [
+            "locations.pallet_town.trainers.rival"
+          ]
       },
       "items": [
         {
           "id": "hm_05",
           "localization": {"de":"VM 05","en":"HM 05"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"cascade_badge"},
-              {"category":"hidden_machines","id":"hm_01"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.badges.cascade_badge",
+                "story_items.hidden_machines.hm_01"
+              ]
           }
         },
         {
           "id": "hp_up",
           "localization": {"de":"KP Plus","en":"HP Up"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"cascade_badge"},
-              {"category":"hidden_machines","id":"hm_01"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.badges.cascade_badge",
+                "story_items.hidden_machines.hm_01"
+              ]
           }
         },
         {
           "id": "moonstone",
           "localization": {"de":"Mondstein","en":"Moonstone"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"cascade_badge"},
-              {"category":"hidden_machines","id":"hm_01"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.badges.cascade_badge",
+                "story_items.hidden_machines.hm_01"
+              ]
           }
         }
       ],
@@ -297,9 +312,10 @@
           "id": "mr_mime_for_clefairy",
           "localization": {"de":"Pantimos für Piepi","en":"Mr. Mime for Clefairy"},
           "conditions": {
-            "trainers": [
-              {"location":"route_06","id":"jr_trainer_s_2"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.route_06.trainers.jr_trainer_s_2"
+              ]
           }
         }
       ],
@@ -358,28 +374,31 @@
       "id": "pewter_city",
       "localization": {"de":"Marmoria City","en":"Pewter City"},
       "conditions": {
-        "trainers": [
-          {"location":"route_02.viridian_forest","id":"bug_catcher_nw"}
-        ]
+          "logic": "AND",
+          "list": [
+            "locations.route_02.viridian_forest.trainers.bug_catcher_nw"
+          ]
       },
       "items": [
         {
           "id": "old_amber",
           "localization": {"de":"Bernstein","en":"Old Amber"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"cascade_badge"},
-              {"category":"hidden_machines","id":"hm_01"}
-            ]
+              "logic": "AND",
+              "list": [
+                "story_items.badges.cascade_badge",
+                "story_items.hidden_machines.hm_01"
+              ]
           }
         },
         {
           "id": "tm_34",
           "localization": {"de":"TM 34","en":"TM 34"},
           "conditions": {
-            "trainers": [
-              {"location":"pewter_city","id":"brock"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.pewter_city.trainers.brock"
+              ]
           }
         }
       ],
@@ -398,9 +417,10 @@
       "id": "route_03",
       "localization": {"de":"Route 3","en":"Route 3"},
       "conditions": {
-        "trainers": [
-          {"location":"pewter_city","id":"brock"}
-        ]
+          "logic": "AND",
+          "list": [
+            "locations.pewter_city.trainers.brock"
+          ]
       },
       "trainers": [
         {
@@ -415,36 +435,40 @@
           "id": "youngster_nw",
           "localization": {"de":"Teenager (Nordwesten)","en":"Youngster (North West)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_03","id":"bug_catcher_w"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.route_03.trainers.bug_catcher_w"
+              ]
           }
         },
         {
           "id": "bug_catcher_n",
           "localization": {"de":"Käfersammler (Norden)","en":"Bug Catcher (North)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_03","id":"youngster_nw"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.route_03.trainers.youngster_nw"
+              ]
           }
         },
         {
           "id": "youngster_c",
           "localization": {"de":"Teenager (Zentrum)","en":"Youngster (Centre)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_03","id":"youngster_nw"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.route_03.trainers.youngster_nw"
+              ]
           }
         },
         {
           "id": "lass_n",
           "localization": {"de":"Göre (Norden)","en":"Lass (North)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_03","id":"youngster_nw"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.route_03.trainers.youngster_nw"
+              ]
           }
         },
         {
@@ -455,9 +479,10 @@
           "id": "lass_e",
           "localization": {"de":"Göre (Osten)","en":"Lass (East)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_03","id":"bug_catcher_e"}
-            ]
+              "logic": "AND",
+              "list": [
+                "locations.route_03.trainers.bug_catcher_e"
+              ]
           }
         }
       ]
@@ -466,9 +491,10 @@
       "id": "mt_moon",
       "localization": {"de":"Mondberg","en":"Mt. Moon"},
       "conditions": {
-        "trainers": [
-          {"location":"route_03","id":"bug_catcher_e"}
-        ]
+          "logic": "AND",
+          "list": [
+            "locations.route_03.trainers.youngster_nw"
+          ]
       },
       "locations": [
         {
@@ -543,9 +569,10 @@
               "id": "ether_ne",
               "localization": {"de":"Äther (Nordosten, Versteckt)","en":"Ether (North East, Hidden)"},
               "conditions": {
-                "trainers": [
-                  {"location":"mt_moon.b2f","id":"rocket_ne"}
-                ]
+                  "logic": "AND",
+                  "list": [
+                    "locations.mt_moon.b2f.trainers.rocket_ne"
+                  ]
               }
             },
             {
@@ -560,14 +587,13 @@
               "id": "dome_fossil",
               "localization": {"de":"Domfossil","en":"Dome Fossil"},
               "conditions": {
-                "trainers": [
-                  {"location":"mt_moon.b2f","id":"super_nerd_nw"}
-                ],
-                "story_items": [
+                "logic": "AND",
+                "list": [
+                  "locations.mt_moon.b2f.trainers.super_nerd_nw",
                   {
-                    "type": "NOT",
-                    "conditions": [
-                      {"category":"misc","id":"fossil"}
+                    "logic": "NOT",
+                    "list": [
+                      "story_items.misc.fossil"
                     ]
                   }
                 ]
@@ -577,14 +603,13 @@
               "id": "helix_fossil",
               "localization": {"de":"Helixfossil","en":"Helix Fossil"},
               "conditions": {
-                "trainers": [
-                  {"location":"mt_moon.b2f","id":"super_nerd_nw"}
-                ],
-                "story_items": [
+                "logic": "AND",
+                "list": [
+                  "locations.mt_moon.b2f.trainers.super_nerd_nw",
                   {
-                    "type": "NOT",
-                    "conditions": [
-                      {"category":"misc","id":"fossil"}
+                    "logic": "NOT",
+                    "list": [
+                      "story_items.misc.fossil"
                     ]
                   }
                 ]
@@ -608,8 +633,9 @@
               "id": "jessie_james",
               "localization": {"de":"Team Rocket (Nordwesten)","en":"Team Rocket (North West)"},
               "conditions": {
-                "trainers": [
-                  {"location":"mt_moon.b2f","id":"super_nerd_nw"}
+                "logic": "AND",
+                "list": [
+                  "locations.mt_moon.b2f.trainers.super_nerd_nw"
                 ]
               }
             }
@@ -621,8 +647,9 @@
       "id": "route_04",
       "localization": {"de":"Route 4","en":"Route 4"},
       "conditions": {
-        "trainers": [
-          {"location":"route_03","id":"bug_catcher_e"}
+        "logic": "AND",
+        "list": [
+          "locations.route_03.trainers.bug_catcher_e"
         ]
       },
       "items": [
@@ -630,8 +657,9 @@
           "id": "great_ball_c",
           "localization": {"de":"Superball (Zentrum, Versteckt)","en":"Great Ball (Centre, Hidden)"},
           "conditions": {
-            "trainers": [
-              {"location":"mt_moon.b2f","id":"jessie_james"}
+            "logic": "AND",
+            "list": [
+              "locations.mt_moon.b2f.trainers.jessie_james"
             ]
           }
         },
@@ -639,8 +667,9 @@
           "id": "tm_04_e",
           "localization": {"de":"TM 04 (Osten)","en":"TM 04 (East)"},
           "conditions": {
-            "trainers": [
-              {"location":"mt_moon.b2f","id":"jessie_james"}
+            "logic": "AND",
+            "list": [
+              "locations.mt_moon.b2f.trainers.jessie_james"
             ]
           }
         }
@@ -656,9 +685,10 @@
           "id": "lass_ne",
           "localization": {"de":"Göre (Nordosten)","en":"Lass (North East) TODO"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"soul_badge"},
-              {"category":"hidden_machines","id":"hm_03"}
+            "logic": "AND",
+            "list": [
+              "story_items.badges.soul_badge",
+              "story_items.hidden_machines.hm_03"
             ]
           }
         }
@@ -668,8 +698,9 @@
       "id": "cerulean_city",
       "localization": {"de":"Azuria City","en":"Cerulean City"},
       "conditions": {
-        "trainers": [
-          {"location":"mt_moon.b2f","id":"jessie_james"}
+        "logic": "AND",
+        "list": [
+          "locations.mt_moon.b2f.trainers.jessie_james"
         ]
       },
       "items": [
@@ -681,8 +712,9 @@
           "id": "tm_28",
           "localization": {"de":"TM 28","en":"TM 28"},
           "conditions": {
-            "trainers": [
-              {"location":"cerulean_city","id":"rocket"}
+            "logic": "AND",
+            "list": [
+              "locations.cerulean_city.trainers.rocket"
             ]
           }
         },
@@ -690,8 +722,9 @@
           "id": "bicycle",
           "localization": {"de":"Fahrrad","en":"Bicycle"},
           "conditions": {
-            "story_items": [
-              {"category":"misc","id":"bike_voucher"}
+            "logic": "AND",
+            "list": [
+              "story_items.misc.bike_voucher"
             ]
           }
         },
@@ -699,8 +732,9 @@
           "id": "tm_11",
           "localization": {"de":"TM 11","en":"TM 11"},
           "conditions": {
-            "trainers": [
-              {"location":"cerulean_city","id":"misty"}
+            "logic": "AND",
+            "list": [
+              "locations.cerulean_city.trainers.misty"
             ]
           }
         }
@@ -714,7 +748,7 @@
       "trainers": [
         {
           "id": "swimmer",
-          "localization": {"de":"","en":""}
+          "localization": {"de":"Schwimmer","en":"Swimmer"}
         },
         {
           "id": "jr_trainer",
@@ -722,23 +756,25 @@
         },
         {
           "id": "misty",
-          "localization": {"de":"","en":""},
+          "localization": {"de":"Misty","en":"Misty"},
           "conditions": {
-            "trainers": [
-              {"location":"cerulean_city","id":"jr_trainer"}
+            "logic": "AND",
+            "list": [
+              "locations.cerulean_city.trainers.jr_trainer"
             ]
           }
         },
         {
           "id": "rival",
-          "localization": {"de":"","en":""}
+          "localization": {"de":"Rivale","en":"Rival"}
         },
         {
           "id": "rocket",
           "localization": {"de":"Rocket Rüpel","en":"Rocket"},
           "conditions": {
-            "items": [
-              {"location":"route_25","id":"ss_ticket"}
+            "logic": "AND",
+            "list": [
+              "locations.route_25.items.ss_ticket"
             ]
           }
         }
@@ -754,8 +790,9 @@
       "id": "route_24",
       "localization": {"de":"Route 24","en":"Route 24"},
       "conditions": {
-        "trainers": [
-          {"location":"cerulean_city","id":"rival"}
+        "logic": "AND",
+        "list": [
+          "locations.cerulean_city.trainers.rival"
         ]
       },
       "items": [
@@ -763,8 +800,9 @@
           "id": "nugget",
           "localization": {"de":"Nugget","en":"Nugget"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"jr_trainer_1"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.jr_trainer_1"
             ]
           }
         },
@@ -772,8 +810,9 @@
           "id": "tm_45",
           "localization": {"de":"TM 45 (Nordwesten)","en":"TM 45 (North West)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"rocket"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.rocket"
             ]
           }
         }
@@ -783,8 +822,9 @@
           "id": "charmander",
           "localization": {"de":"","en":""},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"rocket"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.rocket"
             ]
           }
         }
@@ -798,8 +838,9 @@
           "id": "lass_1",
           "localization": {"de":"Göre 1","en":"Lass 1"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"bug_catcher"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.bug_catcher"
             ]
           }
         },
@@ -807,8 +848,9 @@
           "id": "youngster",
           "localization": {"de":"Teenager","en":"Youngster"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"lass_1"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.lass_1"
             ]
           }
         },
@@ -816,8 +858,9 @@
           "id": "lass_2",
           "localization": {"de":"Göre 2","en":"Lass 2"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"youngster"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.youngster"
             ]
           }
         },
@@ -825,8 +868,9 @@
           "id": "jr_trainer_1",
           "localization": {"de":"Pfadfinder","en":"Jr. Trainer♂"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"lass_2"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.lass_2"
             ]
           }
         },
@@ -834,8 +878,9 @@
           "id": "rocket",
           "localization": {"de":"Rocket Rüpel","en":"Rocket"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"jr_trainer_1"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.jr_trainer_1"
             ]
           }
         },
@@ -843,8 +888,9 @@
           "id": "jr_trainer_2",
           "localization": {"de":"Pfadfinder (Gras)","en":"Jr. Trainer♂ (Grass)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_24","id":"rocket"}
+            "logic": "AND",
+            "list": [
+              "locations.route_24.trainers.rocket"
             ]
           }
         }
@@ -854,8 +900,9 @@
       "id": "route_25",
       "localization": {"de":"Route 25","en":"Route 25"},
       "conditions": {
-        "trainers": [
-          {"location":"route_24","id":"rocket"}
+        "logic": "AND",
+        "list": [
+          "locations.route_24.trainers.rocket"
         ]
       },
       "items": [
@@ -875,8 +922,9 @@
           "id": "ss_ticket",
           "localization": {"de":"Bootsticket","en":"S.S. Ticket"},
           "conditions": {
-            "trainers": [
-              {"location":"route_25","id":"lass_e"}
+            "logic": "AND",
+            "list": [
+              "locations.route_25.trainers.lass_e"
             ]
           }
         }
@@ -906,8 +954,9 @@
           "id": "hiker_c",
           "localization": {"de":"Wanderer (Zentrum)","en":"Hiker (Centre)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_25","id":"lass_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_25.trainers.lass_c"
             ]
           }
         },
@@ -915,8 +964,9 @@
           "id": "jr_trainer_c",
           "localization": {"de":"Pfadfinder (Zentrum)","en":"Jr. Trainer♂ (Centre)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_25","id":"lass_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_25.trainers.lass_c"
             ]
           }
         },
@@ -924,8 +974,9 @@
           "id": "youngster_e",
           "localization": {"de":"Teenager (Osten)","en":"Youngster (East)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_25","id":"lass_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_25.trainers.lass_c"
             ]
           }
         },
@@ -933,8 +984,9 @@
           "id": "lass_e",
           "localization": {"de":"Göre (Osten)","en":"Lass (East)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_25","id":"lass_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_25.trainers.lass_c"
             ]
           }
         }
@@ -948,8 +1000,9 @@
           "id": "route_05_06",
           "localization": {"de":"Route 5 / 6","en":"Route 5 / 6"},
           "conditions": {
-            "trainers": [
-              {"location":"cerulean_city","id":"rocket"}
+            "logic": "AND",
+            "list": [
+              "locations.cerulean_city.trainers.rocket"
             ]
           },
           "items": [
@@ -979,8 +1032,9 @@
       "id": "route_06",
       "localization": {"de":"Route 6","en":"Route 6"},
       "conditions": {
-        "trainers": [
-          {"location":"cerulean_city","id":"rocket"}
+        "logic": "AND",
+        "list": [
+          "locations.cerulean_city.trainers.rocket"
         ]
       },
       "trainers": [
@@ -1008,8 +1062,9 @@
           "id": "jr_trainer_s_2",
           "localization": {"de":"Pfadfinder","en":"Jr. Trainer♂ (South)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_06","id":"jr_trainer_s_1"}
+            "logic": "AND",
+            "list": [
+              "locations.route_06.trainers.jr_trainer_s_1"
             ]
           }
         }
@@ -1019,8 +1074,9 @@
       "id": "vermilion_city",
       "localization": {"de":"Orania City","en":"Vermilion City"},
       "conditions": {
-        "trainers": [
-          {"location":"route_06","id":"jr_trainer_s_2"}
+        "logic": "AND",
+        "list": [
+          "locations.route_06.trainers.jr_trainer_s_2"
         ]
       },
       "items": [
@@ -1036,9 +1092,10 @@
           "id": "max_ether",
           "localization": {"de":"Top-Äther","en":"Max Ether"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"soul_badge"},
-              {"category":"hidden_machines","id":"hm_03"}
+            "logic": "AND",
+            "list": [
+              "story_items.badges.soul_badge",
+              "story_items.hidden_machines.hm_03"
             ]
           }
         }
@@ -1048,8 +1105,9 @@
           "id": "squirtle",
           "localization": {"de":"Schiggy","en":"Squirtle"},
           "conditions": {
-            "trainers": [
-              {"location":"vermilion_city.vermilion_gym","id":"lt_surge"}
+            "logic": "AND",
+            "list": [
+              "locations.vermilion_city.vermilion_gym.trainers.lt_surge"
             ]
           }
         }
@@ -1059,17 +1117,13 @@
           "id": "ss_anne",
           "localization": {"de":"MS Anne","en":"S.S. Anne"},
           "conditions": {
-            "story_items": [
+            "logic": "AND",
+            "list": [
+              "story_items.misc.ss_ticket",
               {
-                "type": "AND",
-                "conditions": [
-                  {"category":"misc","id":"ss_ticket"},
-                  {
-                    "type": "NOT",
-                    "conditions": [
-                      {"category":"hidden_machines","id":"hm_01"}
-                    ]
-                  }
+                "logic": "NOT",
+                "list": [
+                  "locations.vermilion_city.ss_anne.2f.items.hm_01"
                 ]
               }
             ]
@@ -1091,8 +1145,9 @@
                   "id": "tm_44_4r",
                   "localization": {"de":"TM 44 (4. Raum Von Rechts)","en":"TM 44 (4th Room From Right)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.b1f","id":"sailor_4r"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.b1f.trainers.sailor_4r"
                     ]
                   }
                 },
@@ -1100,8 +1155,9 @@
                   "id": "hyper_potion_5r",
                   "localization": {"de":"Hypertrank (5. Raum Von Rechts, Versteckt)","en":"Hyper Potion (5th Room From Right, Hidden)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.b1f","id":"sailor_5r_t"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.b1f.trainers.sailor_5r_t"
                     ]
                   }
                 }
@@ -1131,8 +1187,9 @@
                   "id": "sailor_5r_t",
                   "localization": {"de":"Matrose (5. Raum Von Rechts, Oben)","en":"Sailor (5th Room From Right, Top)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.b1f","id":"sailor_5r_b"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.b1f.trainers.sailor_5r_b"
                     ]
                   }
                 }
@@ -1178,26 +1235,29 @@
                   "id": "max_ether_2l",
                   "localization": {"de":"Top-Äther (2. Raum Von Links)","en":"Max Ether (2nd Room From Left)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.2f","id":"gentleman_2l"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.2f.trainers.gentleman_2l"
                     ]
                   }
                 },
                 {
                   "id": "rare_candy_4l",
-                  "localization": {"de":"","en":""},
+                  "localization": {"de":"Sonderbonbon (4. Raum Von Links)","en":"Rare Candy (4th Room From Left)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.2f","id":"gentleman_4l"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.2f.trainers.gentleman_4l"
                     ]
                   }
                 },
                 {
                   "id": "hm_01",
-                  "localization": {"de":"","en":""},
+                  "localization": {"de":"VM 01","en":"HM 01"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.2f","id":"rival"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.2f.trainers.rival"
                     ]
                   }
                 }
@@ -1211,8 +1271,9 @@
                   "id": "gentleman_2l",
                   "localization": {"de":"Gentleman (2. Raum Von Links)","en":"Gentleman (2nd Room From Left)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.2f","id":"fisherman_2l"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.2f.trainers.fisherman_2l"
                     ]
                   }
                 },
@@ -1224,8 +1285,9 @@
                   "id": "lass_4l",
                   "localization": {"de":"","en":""},
                   "conditions": {
-                    "trainers": [
-                      {"location":"vermilion_city.ss_anne.2f","id":"gentleman_4l"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.vermilion_city.ss_anne.2f.trainers.gentleman_4l"
                     ]
                   }
                 },
@@ -1255,9 +1317,10 @@
           "id": "vermilion_gym",
           "localization": {"de":"Orania Arena","en":"Vermilion Gym"},
           "conditions": {
-            "story_items": [
-              {"category":"badges","id":"cascade_badge"},
-              {"category":"hidden_machines","id":"hm_01"}
+            "logic": "AND",
+            "list": [
+              "story_items.badges.cascade_badge",
+              "story_items.hidden_machines.hm_01"
             ]
           },
           "items": [
@@ -1265,8 +1328,9 @@
               "id": "tm_24",
               "localization": {"de":"TM 24","en":"TM 24"},
               "conditions": {
-                "trainers": [
-                  {"location":"vermilion_city.vermilion_gym","id":"lt_surge"}
+                "logic": "AND",
+                "list": [
+                  "locations.vermilion_city.vermilion_gym.trainers.lt_surge"
                 ]
               }
             }
@@ -1296,8 +1360,9 @@
       "id": "route_11",
       "localization": {"de":"Route 11","en":"Route 11"},
       "conditions": {
-        "trainers": [
-          {"location":"route_06","id":"jr_trainer_s_2"}
+        "logic": "AND",
+        "list": [
+          "locations.route_06.trainers.jr_trainer_s_2"
         ]
       },
       "items": [
@@ -1363,9 +1428,10 @@
       "id": "route_09",
       "localization": {"de":"Route 9","en":"Route 9"},
       "conditions": {
-        "story_items": [
-          {"category":"hidden_machines","id":"hm_01"},
-          {"category":"badges","id":"cascade_badge"}
+        "logic": "AND",
+        "list": [
+          "story_items.hidden_machines.hm_01",
+          "story_items.badges.cascade_badge"
         ]
       },
       "items": [
@@ -1373,8 +1439,9 @@
           "id": "tm_30",
           "localization": {"de":"TM 30","en":"TM 30"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"jr_trainer_w"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.jr_trainer_w"
             ]
           }
         },
@@ -1382,8 +1449,9 @@
           "id": "ether",
           "localization": {"de":"Äther (Versteckt)","en":"Ether (Hidden)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"bug_catcher_n"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.bug_catcher_n"
             ]
           }
         }
@@ -1397,8 +1465,9 @@
           "id": "hiker_sw",
           "localization": {"de":"Wanderer (Südwesten)","en":"Hiker (South West)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"jr_trainer_w"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.jr_trainer_w"
             ]
           }
         },
@@ -1406,8 +1475,9 @@
           "id": "youngster_c",
           "localization": {"de":"Teenager (Zentrum)","en":"Youngster (Center)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"jr_trainer_w"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.jr_trainer_w"
             ]
           }
         },
@@ -1415,8 +1485,9 @@
           "id": "bug_catcher_n",
           "localization": {"de":"Käfersammler (Norden)","en":"Bug Catcher (North)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"youngster_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.youngster_c"
             ]
           }
         },
@@ -1424,8 +1495,9 @@
           "id": "hiker_s",
           "localization": {"de":"Wanderer (Süden)","en":"Hiker (South)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"jr_trainer_w"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.jr_trainer_w"
             ]
           }
         },
@@ -1433,8 +1505,9 @@
           "id": "bug_catcher_c",
           "localization": {"de":"Käfersammler (Zentrum)","en":"Bug Catcher (Center)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"jr_trainer_w"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.jr_trainer_w"
             ]
           }
         },
@@ -1442,8 +1515,9 @@
           "id": "jr_trainer_c",
           "localization": {"de":"Pfadfinder (Zentrum)","en":"Jr. Trainer♂ (Center)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"bug_catcher_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.bug_catcher_c"
             ]
           }
         },
@@ -1451,8 +1525,9 @@
           "id": "hiker_n",
           "localization": {"de":"Wanderer (Norden)","en":"Hiker (North)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"bug_catcher_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.bug_catcher_c"
             ]
           }
         },
@@ -1460,8 +1535,9 @@
           "id": "jr_trainer_e",
           "localization": {"de":"Pfadfinderin (Osten)","en":"Jr. Trainer♀ (East)"},
           "conditions": {
-            "trainers": [
-              {"location":"route_09","id":"bug_catcher_c"}
+            "logic": "AND",
+            "list": [
+              "locations.route_09.trainers.bug_catcher_c"
             ]
           }
         }
@@ -1471,8 +1547,9 @@
       "id": "route_10",
       "localization": {"de":"Route 10","en":"Route 10"},
       "conditions": {
-        "trainers": [
-          {"location":"route_09","id":"bug_catcher_c"}
+        "logic": "AND",
+        "list": [
+          "locations.route_09.trainers.bug_catcher_c"
         ]
       },
       "items": [
@@ -1480,9 +1557,10 @@
           "id": "super_potion",
           "localization": {"de":"Supertrank (Norden, Versteckt)","en":"Super Potion (North, Hidden)"},
           "conditions": {
-            "story_items": [
-              {"category":"hidden_machines","id":"hm_01"},
-              {"category":"badges","id":"cascade_badge"}
+            "logic": "AND",
+            "list": [
+              "story_items.hidden_machines.hm_01",
+              "story_items.badges.cascade_badge"
             ]
           }
         },
@@ -1500,9 +1578,10 @@
           "id": "pokemaniac_n",
           "localization": {"de":"Pokémaniac (Norden)","en":"PokéManiac (North)"},
           "conditions": {
-            "story_items": [
-              {"category":"hidden_machines","id":"hm_03"},
-              {"category":"badges","id":"cascade_badge"}
+            "logic": "AND",
+            "list": [
+              "story_items.hidden_machines.hm_03",
+              "story_items.badges.soul_badge"
             ]
           }
         },
@@ -1540,8 +1619,9 @@
                   "id": "hiker_nw",
                   "localization": {"de":"Wanderer (Nordwesten)","en":"Hiker (North West)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.route_10.rock_tunnel.b1f.trainers.jr_trainer_s"
                     ]
                   }
                 },
@@ -1583,8 +1663,9 @@
                   "id": "pokemaniac_sw",
                   "localization": {"de":"Pokémaniac (Südwesten)","en":"PokéManiac (South West)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"route_10.rock_tunnel.1f","id":"pokemaniac_n"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.route_10.rock_tunnel.1f.trainers.pokemaniac_n"
                     ]
                   }
                 },
@@ -1592,8 +1673,9 @@
                   "id": "jr_trainer_s",
                   "localization": {"de":"Pfadfinderin (Süden)","en":"Jr. Trainer♀ (South)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"route_10.rock_tunnel.b1f","id":"pokemaniac_sw"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.route_10.rock_tunnel.b1f.trainers.pokemaniac_sw"
                     ]
                   }
                 },
@@ -1601,8 +1683,9 @@
                   "id": "pokemaniac_c",
                   "localization": {"de":"Pokémaniac (Zentrum)","en":"PokéManiac (Center)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.route_10.rock_tunnel.b1f.trainers.jr_trainer_s"
                     ]
                   }
                 },
@@ -1610,8 +1693,9 @@
                   "id": "hiker_e",
                   "localization": {"de":"Wanderer (Osten)","en":"Hiker (East)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.route_10.rock_tunnel.b1f.trainers.jr_trainer_s"
                     ]
                   }
                 },
@@ -1619,8 +1703,9 @@
                   "id": "hiker_ne",
                   "localization": {"de":"Wanderer (Nordosten)","en":"Hiker (North East)"},
                   "conditions": {
-                    "trainers": [
-                      {"location":"route_10.rock_tunnel.b1f","id":"jr_trainer_s"}
+                    "logic": "AND",
+                    "list": [
+                      "locations.route_10.rock_tunnel.b1f.trainers.jr_trainer_s"
                     ]
                   }
                 }
@@ -1632,9 +1717,10 @@
           "id": "power_plant",
           "localization": {"de":"Kraftwerk","en":"Power Plant"},
           "conditions": {
-            "story_items": [
-              {"category":"hidden_machines","id":"hm_03"},
-              {"category":"badges","id":"soul_badge"}
+            "logic": "AND",
+            "list": [
+              "story_items.hidden_machines.hm_03",
+              "story_items.badges.soul_badge"
             ]
           }
         }
